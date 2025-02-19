@@ -1,0 +1,27 @@
+package adapter;
+
+import java.util.Date;
+
+public class DataSourceAdapter implements DataSource {
+    private Info info;
+
+    public DataSourceAdapter(Info info) {
+        this.info = info;
+    }
+
+    @Override
+    public String getNomeCompleto() {
+        // Combina nome e cognome per creare il nome completo
+        return info.getNome() + " " + info.getCognome();
+    }
+
+    @Override
+    public int getEta() {
+        // Calcola l'età dalla data di nascita
+        Date dataDiNascita = info.getDataDiNascita();
+
+        int currentYear = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
+        int birthYear = dataDiNascita.getYear() + 1900;
+        return currentYear - birthYear;
+    }
+}
