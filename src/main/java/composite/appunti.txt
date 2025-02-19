@@ -1,0 +1,6 @@
+1 - creiamo tutte le classi
+2 - creiamo il composite (interfaccia comune)
+3 - creiamo le classi concrete che implementano il composite
+4 - definizione dei metodi: getNumeroPagine(), stampa(), getPrezzo(), getAutori()
+
+

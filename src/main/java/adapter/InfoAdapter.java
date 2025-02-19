@@ -3,22 +3,23 @@ package adapter;
 import java.util.Date;
 
 public class InfoAdapter implements DataSource {
-    private Info info;
+    private final Info info;
 
+    //costruttore
     public InfoAdapter(Info info) {
         this.info = info;
     }
 
+    //metodo dell'interfaccia che otteniamo adattando i valori di info
     @Override
     public String getNomeCompleto() {
-        // Combina nome e cognome per ottenere il nome completo
         return info.getNome() + " " + info.getCognome();
     }
 
+    //uguale per l'età
     @Override
     public int getEta() {
-        // Calcola l'età dalla data di nascita
-        int currentYear = java.time.Year.now().getValue();
+             int currentYear = java.time.Year.now().getValue();
         int birthYear = info.getDataDiNascita().getYear();
         return currentYear - birthYear;
     }

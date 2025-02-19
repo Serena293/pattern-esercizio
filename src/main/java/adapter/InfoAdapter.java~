@@ -1,4 +1,26 @@
 package adapter;
 
-public class InfoAdapter {
+import java.util.Date;
+
+public class InfoAdapter implements DataSource {
+    private final Info info;
+
+    //costruttore
+    public InfoAdapter(Info info) {
+        this.info = info;
+    }
+
+    //metodo dell'interfaccia che otteniamo adattando i valori di info
+    @Override
+    public String getNomeCompleto() {
+        return info.getNome() + " " + info.getCognome();
+    }
+
+    @Override
+    public int getEta() {
+        // Calcola l'età dalla data di nascita
+        int currentYear = java.time.Year.now().getValue();
+        int birthYear = info.getDataDiNascita().getYear();
+        return currentYear - birthYear;
+    }
 }

@@ -9,11 +9,11 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        // Creazione di un oggetto Info usando LocalDate
+        // Info
         Info info = new Info("Serena", "Rossi", LocalDate.of(2000, 6, 15)); // Anno 1990, Giugno 15
         DataSource ds = new InfoAdapter(info);
 
-        // Creazione di un oggetto UserData
+        // UserData
         UserData user = new UserData("", 0);
         user.getData(ds);
 

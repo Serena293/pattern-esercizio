@@ -1,0 +1,12 @@
+Un **adapter** è un design pattern strutturale che permette a classi incompatibili di lavorare insieme. In sostanza, l'adapter agisce come un "ponte" che converte l'interfaccia di una classe in un'altra interfaccia che il client si aspetta.
+
+### Cos'ha bisogno per funzionare:
+1. **Classe Target**: L'interfaccia che il client si aspetta (ad esempio, l'interfaccia `DataSource`).
+2. **Classe Adattata**: La classe che deve essere adattata (ad esempio, `Info`).
+3. **Adapter**: Una classe che implementa l'interfaccia Target e "traduci" i metodi della classe Adattata in quelli richiesti dalla Target.
+
+### Come funziona:
+- L'adapter implementa l'interfaccia Target e incapsula l'oggetto della classe Adattata.
+- Poi, traduce le chiamate ai metodi richiesti dalla Target in chiamate ai metodi della classe Adattata, se necessario.
+
+In sintesi, l'adapter ti permette di "adattare" un'interfaccia a una diversa senza modificare direttamente le classi esistenti.
