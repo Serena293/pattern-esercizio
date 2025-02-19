@@ -1,11 +1,13 @@
 package adapter;
 
+import java.time.LocalDate;
+
 public class Info {
     private String nome;
     private String cognome;
-    private Date dataDiNascita;
+    private LocalDate dataDiNascita;
 
-    public Info(String nome, String cognome, Date dataDiNascita) {
+    public Info(String nome, String cognome, LocalDate dataDiNascita) {
         this.nome = nome;
         this.cognome = cognome;
         this.dataDiNascita = dataDiNascita;
@@ -27,15 +29,15 @@ public class Info {
         this.cognome = cognome;
     }
 
-    public Date getDataDiNascita() {
+    public LocalDate getDataDiNascita() {
         return dataDiNascita;
     }
 
-    public void setDataDiNascita(Date dataDiNascita) {
+    public void setDataDiNascita(LocalDate dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
 
-    public void DataDiNascita(Date dataDiNascita) {
+    public void DataDiNascita(LocalDate dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
 }
